@@ -13,8 +13,8 @@ public class StreamsUtil {
     /**
      * Finds an element from a stream, returns null if not found
      */
-    public static <T> T findElementFromStream(T object, Stream<T> stream) {
+    public static <T> T findElementFromStream(T searchObject, Stream<T> stream) {
 
-        return (T) stream.filter(element -> element.equals(object)).findFirst().orElse(null);
+        return (T) stream.filter(element -> element.equals(searchObject)).findFirst().orElse(null);
     }
 }
